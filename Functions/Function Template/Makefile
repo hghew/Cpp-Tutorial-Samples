@@ -1,4 +1,4 @@
-CXX=g++
+CXX=g++ -std=c++20
 #set exec names to the base name of the directory, and
 #replace all spaces with underscores
 EXEC:=$(shell basename "`pwd`" | sed 's/ /_/g')
