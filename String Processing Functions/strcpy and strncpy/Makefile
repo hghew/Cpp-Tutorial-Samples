@@ -1,4 +1,5 @@
 CXX=g++
+CXXFLAGS=-std=c++23
 #set exec names to the base name of the directory, and
 #replace all spaces with underscores
 EXEC:=$(shell basename "`pwd`" | sed 's/ /_/g')
@@ -10,10 +11,10 @@ all: $(EXEC)
 full: clean all
 
 %.o : %.cpp
-	$(CXX) -c $< 
+	$(CXX) $(CXXFLAGS) -c $< 
 	
 $(EXEC): $(OBJS)
-	$(CXX) -o $@ $^ 
+	$(CXX) $(CXXFLAGS) -o $@ $^ 
 	
 clean:
 	rm *.o $(EXEC) -f

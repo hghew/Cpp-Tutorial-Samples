@@ -10,7 +10,9 @@ To access or contribute the most recent modifications of these samples, find the
 
 Each sample has a separate folder of its own, and is usually in a file named `Prog.cpp`. If you want to build a sample with Microsoft Visual Studio, then you need to create a project and copy the sample into that project by your own.
 
-However there's a `Makefile` in each directory, which makes the process of building and running the samples easier in *Linux/Unix* and *Cygwin*. In order to build each sample, simply `cd` to its directory and run `make` to build the required executable. Run `make clean` to clean-up your directory. Also `make full`, first cleans and then rebuilds each sample. 
+However there's a `Makefile` in each directory, which makes the process of building and running the samples easier in *Linux/Unix* and *Cygwin*. In order to build each sample, simply `cd` to its directory and run `make` to build the required executable. Run `make clean` to clean up your directory. Also `make full`, first cleans and then rebuilds each sample.
+
+All Makefiles now compile the samples using **C++23** by passing the `-std=c++23` flag to `g++`. No additional configuration is needed; simply run `make` and the program will be built with the latest C++ standard.
 
 ## References
 
